@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+    <h4 text-center>
+      <ion-icon name="school"></ion-icon>
+      Datos del Alumno
+    </h4>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-input type="text" #id  name="id_Persona"></ion-input>
+  <form (ngSubmit)="editarPersona()">
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="Nombre" type="text" #nombre name="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Apellido Paterno" type="text" name="apellidoPaterno" #apPaterno></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Apellido Materno" type="text" name="apellidoMaterno" #apMaterno></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Licenciatura" type="text" #licenciatura></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Semestre" type="number"  #semestre></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-label stacked>Datos de la Cuenta:</ion-label>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-input placeholder="Nombre de Usuario" type="text" name="usuario" #usuario></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Contraseña" type="password" name="password" #password></ion-input>
+    </ion-item>
+  </ion-list>
+
+<ion-list text-center>
+    <button id="botonEliminar" (click)="borrarPersona()" ion-button icon-start>
+    <ion-icon name='trash' ></ion-icon>
+    Eliminar
+  </button>
+  <button id="botonEditar" type="submit" ion-button icon-start>
+    <ion-icon name='md-create' ></ion-icon>
+    Editar
+  </button>
+</ion-list>
+</form>
+</ion-content>

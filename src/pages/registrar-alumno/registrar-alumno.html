@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+    <h4 text-center>
+      <ion-icon name="school"></ion-icon>
+      Nuevo Alumno
+    </h4>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-label stacked>Datos Personales:</ion-label>
+
+ <form (ngSubmit)="storePersona()">
+<ion-list>
+  <ion-item>
+    <ion-input placeholder="Nombre" type="text" [(ngModel)]="persona.nombre" name="nombre" #nombre></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input placeholder="Apellido Paterno" type="text" [(ngModel)]="persona.apellidoPaterno" name="apellidoPaterno" #apPaterno></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input placeholder= "Apellido Materno" type="text" [(ngModel)]="persona.apellidoMaterno" name="apellidoMaterno" #apMaterno></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input placeholder="Licenciatura" type="text" #licenciatura></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input placeholder="Semestre" type="number" #semestre></ion-input>
+  </ion-item>
+</ion-list>
+
+<ion-label stacked>Datos de la Cuenta:</ion-label>
+
+<ion-list>
+
+<ion-item>
+  <ion-input placeholder="Nombre de Usuario" type="text" [(ngModel)]="persona.usuario" name="usuario" #usuario></ion-input>
+</ion-item>
+ <ion-item>
+    <ion-input placeholder="Contraseña" type="password"  [(ngModel)]="persona.password" name="password" #contrasena></ion-input>
+  </ion-item>
+</ion-list>
+
+
+<button ion-button type="submit" block color="secondary">Registrar Alumno</button>
+</form>
+
+</ion-content>

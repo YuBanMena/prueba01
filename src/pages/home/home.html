@@ -1,0 +1,33 @@
+<ion-header>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title text-center>
+      Menus
+    </ion-title>
+
+</ion-header>
+
+<ion-content padding>
+<h4 text-center>
+  <ion-icon name="school"></ion-icon>
+  Bienvenido a su portal
+</h4>
+
+  <ion-list no-lines>
+    <ion-item>
+      <h4>Lista de Alumnos</h4>
+          <button ion-button item-end color="secondary" (click)="irARegistrarAlumno()">Registrar Alumno</button>
+    </ion-item>
+  </ion-list>
+
+<ion-list>
+  <button ion-item *ngFor="let item of personas" (click)="elementSelected(item)">
+    {{ item.nombre }} {{ item.apellidoPaterno }} {{ item.apellidoMaterno}}
+  </button>
+</ion-list>
+
+<button ion-button block (click)="getPicture()">Toma una foto</button>
+<img [src]="image" *ngIf="image" />
+
+</ion-content>
